@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>cartoon-project</title>
+    <!-- <link href="style.css" rel="stylesheet"> -->
+    <script>
+      function changeCanvasColor() {
+        // Locate the element "mycanvas" in the document.
+        var canvas = document.getElementById("mycanvas");
+        var context = canvas.getContext("2d");
+
+        context.fillStyle = "#daf1f5";
+        context.fillRect(0, 0, 800, 600);
+
+        context.font = "20px Arial";
+        context.textAlign = "center";
+        context.fillStyle = "black";
+        context.fillText("Cartoon-Project", 400, 20);
+
+        //Sun
+        context.beginPath();
+        context.arc(30, 20, 70, 0, 2 * Math.PI);
+        context.fillStyle = "yellow";
+        context.fill();
+
+        context.moveTo(100, 60);
+        context.lineTo(120, 80);
+
+        context.moveTo(120, 20);
+        context.lineTo(155, 15);
+
+        context.moveTo(50, 100);
+        context.lineTo(35, 125);
+        context.stroke();
+
+        //Mountain
+        context.beginPath();
+        context.moveTo(0, 300);
+        context.lineTo(120, 200);
+        context.lineTo(180, 250);
+        context.lineTo(300, 160);
+        context.lineTo(380, 220);
+        context.lineTo(500, 170);
+        context.lineTo(580, 220);
+        context.lineTo(680, 180);
+        context.lineTo(800, 300);
+
+        // Create gradient
+        var grd = context.createLinearGradient(0, 0, 800, 0);
+        grd.addColorStop(0, "#a4bfa9");
+        grd.addColorStop(0.5, "#90ad95");
+        grd.addColorStop(1, "#529e5f");
+
+        // Fill with gradient
+        context.fillStyle = grd;
+        context.fillRect(0, 300, 800, 500);
+        context.fill();
+        context.stroke();
+
+        //Cloud
+        context.beginPath();
+        context.arc(200, 90, 35, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+        context.beginPath();
+        context.arc(240, 90, 45, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+        context.beginPath();
+        context.arc(280, 90, 40, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+        context.beginPath();
+        context.arc(320, 90, 35, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+
+        context.beginPath();
+        context.arc(500, 90, 35, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+        context.beginPath();
+        context.arc(540, 90, 45, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+        context.beginPath();
+        context.arc(580, 90, 40, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+        context.beginPath();
+        context.arc(620, 90, 35, 0, 2 * Math.PI);
+        context.fillStyle = "white";
+        context.fill();
+
+        //Ground
+        context.fillStyle = "#43ba77";
+        context.fillRect(0, 500, 800, 600);
+
+        //House
+        context.beginPath();
+        context.moveTo(120, 390);
+        context.lineTo(120, 570);
+        context.lineTo(300, 570);
+        context.lineTo(300, 390);
+        context.lineTo(120, 390);
+        context.fillStyle = "#b5b0a1";
+        context.fill();
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(90, 390);
+        context.lineTo(210, 300);
+        context.lineTo(330, 390);
+        context.lineTo(90, 390);
+        context.fillStyle = "#5c9eb8";
+        context.fill();
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(280, 320);
+        context.lineTo(300, 320);
+        context.lineTo(300, 368);
+        context.lineTo(280, 352);
+        context.lineTo(280, 320);
+        context.fillStyle = "#5a706f";
+        context.fill();
+        context.stroke();
+
+        //Windows
+        context.beginPath();
+        context.moveTo(140, 410);
+        context.lineTo(140, 455);
+        context.lineTo(185, 455);
+        context.lineTo(185, 410);
+        context.lineTo(140, 410);
+        context.fillStyle = "#8cd7f5";
+        context.fill();
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(140, 432.5);
+        context.lineTo(185, 432.5);
+        context.stroke();
+
+        context.beginPath();
+        context.moveTo(162.5, 410);
+        context.lineTo(162.5, 455);
+        context.stroke();
+
+        //Door
+        context.beginPath();
+        context.moveTo(230, 480);
+        context.lineTo(230, 570);
+        context.lineTo(300, 570);
+        context.lineTo(300, 480);
+        context.lineTo(230, 480);
+        context.fillStyle = "#ad8f76";
+        context.fill();
+        context.stroke();
+
+        context.beginPath();
+        context.arc(280, 510, 6, 0, 2 * Math.PI);
+        context.fillStyle = "yellow";
+        context.fill();
+        context.stroke();
+
+        //For loop
+        var x = 300,
+          y = 300;
+        for (var i = 0; i < 4; i++) {
+          context.beginPath();
+          context.arc(x, y, 6, 0, 2 * Math.PI);
+          context.fillStyle = "#85848c";
+          context.fill();
+          x += 20;
+          y -= 20;
+          context.stroke();
+        }
+
+        var x1 = 400,
+          y1 = 500;
+        for (var i = 0; i < 15; i++) {
+          context.beginPath();
+          context.moveTo(x1, y1);
+          context.lineTo(x1 + 15, y1 - 15);
+          context.lineTo(x1 + 30, y1);
+          context.fillStyle = "#08730f";
+          context.fill();
+          context.strokeStyle = "#08730f";
+          x1 += 20;
+          context.stroke();
+        }
+      }
+
+      // Once the HTML document has finished loading and has been parsed, call the changeCanvasColor function.
+      document.addEventListener("DOMContentLoaded", changeCanvasColor);
+    </script>
+  </head>
+
+  <body>
+    <canvas
+      id="mycanvas"
+      width="800"
+      height="600"
+      style="border: 1px solid #000000"
+    ></canvas>
+  </body>
+  <footer>
+    CISC 3610 Jiamin Shi <a href="../index.html">Return to main page</a>
+  </footer>
+</html>
