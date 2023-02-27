@@ -1,70 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Chart Program</title>
-    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet.css" />
     <script>
-        function Chart() {
-            var canvas = document.getElementById("mycanvas");
-            var context = canvas.getContext("2d");
-            //Drawing coordinate axes
-            //x axes
-            context.beginPath();
-            context.moveTo(50, 500);
-            context.lineTo(600, 500);
-            context.strokeStyle = "black";
-            context.stroke();
-            //y axes
-            context.beginPath();
-            context.moveTo(100, 550);
-            context.lineTo(100, 100);
-            context.strokeStyle = "black";
-            context.stroke();
+      function Chart() {
+        var canvas = document.getElementById("mycanvas");
+        var context = canvas.getContext("2d");
+        //Drawing coordinate axes
+        //x axes
+        context.beginPath();
+        context.moveTo(50, 500);
+        context.lineTo(600, 500);
+        context.strokeStyle = "black";
+        context.stroke();
+        //y axes
+        context.beginPath();
+        context.moveTo(100, 550);
+        context.lineTo(100, 100);
+        context.strokeStyle = "black";
+        context.stroke();
 
-            var fruit = [
-                { name: "Kiwi", quantity: 15, color: "green" },
-                { name: "Apple", quantity: 10, color: "red" },
-                { name: "Banana", quantity: 18, color: "yellow" },
-                { name: "Orange", quantity: 12, color: "orange" },
-                { name: "Grape", quantity: 20, color: "purple" }
-            ]
-            var x = 170, y = 480;
-            for (var i = 0; i < fruit.length; i++) {
-                for (var j = 0; j < fruit[i].quantity; j++) {
-                    context.beginPath()
-                    context.rect(x, y, 20, 20);
-                    context.fillStyle = fruit[i].color;
-                    context.fill()
-                    context.stroke()
-                    y -= 20;
-                }
-                context.font = "20px Arial";
-                context.fillStyle = "black";
-                context.textAlign = "center";
-                context.fillText(fruit[i].name, 180 + i*80, 530);
-                y = 480
-                x += 80
-            }
-            context.font = "20px Arial";
-                context.fillStyle = "black";
-                context.textAlign = "center";
-                context.fillText("Jiamin Shi HW1", 320, 580);
+        var fruit = [
+          { name: "Kiwi", quantity: 15, color: "green" },
+          { name: "Apple", quantity: 10, color: "red" },
+          { name: "Banana", quantity: 18, color: "yellow" },
+          { name: "Orange", quantity: 12, color: "orange" },
+          { name: "Grape", quantity: 20, color: "purple" },
+        ];
+        var x = 170,
+          y = 480;
+        for (var i = 0; i < fruit.length; i++) {
+          for (var j = 0; j < fruit[i].quantity; j++) {
+            context.beginPath();
+            context.rect(x, y, 20, 20);
+            context.fillStyle = fruit[i].color;
+            context.fill();
+            context.stroke();
+            y -= 20;
+          }
+          context.font = "20px Arial";
+          context.fillStyle = "black";
+          context.textAlign = "center";
+          context.fillText(fruit[i].name, 180 + i * 80, 530);
+          y = 480;
+          x += 80;
         }
+        context.font = "20px Arial";
+        context.fillStyle = "black";
+        context.textAlign = "center";
+        context.fillText("Jiamin Shi Lab1", 320, 580);
+      }
 
-        document.addEventListener('DOMContentLoaded', Chart);
+      document.addEventListener("DOMContentLoaded", Chart);
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Chart Program</h1>
-    <canvas id="mycanvas" 
-    width="650" height="650" 
-    style="border:1px solid #000000;">
+    <canvas
+      id="mycanvas"
+      width="650"
+      height="650"
+      style="border: 1px solid #000000"
+    >
     </canvas>
-</body>
-<footer>CISC 3610 Jiamin Shi <a href="../index.html">Return to main page</a></footer>
-
+  </body>
+  <footer>
+    CISC 3610 Jiamin Shi <a href="../index.html">Return to main page</a>
+  </footer>
 </html>
