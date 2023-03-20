@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Audio Lab</title>
+    <link rel="stylesheet" href="../stylesheet.css" />
+    <link rel="stylesheet" href="audio.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Audio Lab</h1>
+    <audio id="accordion">
+      <source src="audio/accordion.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="cello">
+      <source src="audio/cello.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="guitar">
+      <source src="audio/guitar.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="harmonica">
+      <source src="audio/harmonica.mp3" type="audio/mp3" />
+    </audio>
+    <audio id="piano">
+      <source src="audio/piano.mp3" type="audio/mp3" />
+    </audio>
+    <div id="aduioBox">
+      <button
+        class="audioButton"
+        type="button"
+        onclick="playAudio('accordion')"
+      >
+        Accordion
+      </button>
+      <button class="audioButton" type="button" onclick="playAudio('cello')">
+        Cello
+      </button>
+      <button class="audioButton" type="button" onclick="playAudio('guitar')">
+        Guitar
+      </button>
+      <button
+        class="audioButton"
+        type="button"
+        onclick="playAudio('harmonica')"
+      >
+        Harmonica
+      </button>
+      <button class="audioButton" type="button" onclick="playAudio('piano')">
+        Piano
+      </button>
+    </div>
+  </body>
+  <footer id="footer">
+    CISC 3610 Jiamin Shi <a href="../index.html">Return to main page</a>
+  </footer>
+</html>
